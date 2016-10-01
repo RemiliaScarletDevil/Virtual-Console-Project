@@ -1,0 +1,751 @@
+	.file	"vram_bank_handle.cpp"
+	.section .rdata,"dr"
+_ZStL19piecewise_construct:
+	.space 1
+.lcomm _ZStL8__ioinit,1,1
+.LC0:
+	.ascii "VRAM_BANK_HANDLE ini\12\0"
+.LC1:
+	.ascii "VRAM_HANDLE ini finished\12\12\0"
+	.text
+	.align 2
+	.globl	_ZN16vram_bank_HandleC2Ev
+	.def	_ZN16vram_bank_HandleC2Ev;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN16vram_bank_HandleC2Ev
+_ZN16vram_bank_HandleC2Ev:
+.LFB5485:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	pushq	%r12
+	.seh_pushreg	%r12
+	pushq	%rdi
+	.seh_pushreg	%rdi
+	pushq	%rsi
+	.seh_pushreg	%rsi
+	pushq	%rbx
+	.seh_pushreg	%rbx
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	movq	%rcx, 48(%rbp)
+	leaq	16+_ZTV16vram_bank_Handle(%rip), %rdx
+	movq	48(%rbp), %rax
+	movq	%rdx, (%rax)
+	leaq	.LC0(%rip), %rdx
+	movq	.refptr._ZSt4cout(%rip), %rcx
+.LEHB0:
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movl	$328, %ecx
+	call	_Znay
+.LEHE0:
+	movq	%rax, %rdi
+	movq	$10, (%rdi)
+	leaq	8(%rdi), %rsi
+	movl	$9, %ebx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%rsi, %rcx
+.LEHB1:
+	call	_ZN4SRAMC1Eyh
+	leaq	32(%rsi), %r12
+	subq	$1, %rbx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%r12, %rcx
+	call	_ZN4SRAMC1Eyh
+	addq	$32, %r12
+	subq	$1, %rbx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%r12, %rcx
+	call	_ZN4SRAMC1Eyh
+	addq	$32, %r12
+	subq	$1, %rbx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%r12, %rcx
+	call	_ZN4SRAMC1Eyh
+	addq	$32, %r12
+	subq	$1, %rbx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%r12, %rcx
+	call	_ZN4SRAMC1Eyh
+	addq	$32, %r12
+	subq	$1, %rbx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%r12, %rcx
+	call	_ZN4SRAMC1Eyh
+	addq	$32, %r12
+	subq	$1, %rbx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%r12, %rcx
+	call	_ZN4SRAMC1Eyh
+	addq	$32, %r12
+	subq	$1, %rbx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%r12, %rcx
+	call	_ZN4SRAMC1Eyh
+	addq	$32, %r12
+	subq	$1, %rbx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%r12, %rcx
+	call	_ZN4SRAMC1Eyh
+	leaq	32(%r12), %rax
+	subq	$1, %rbx
+	movl	$240, %r8d
+	movl	$1825201, %edx
+	movq	%rax, %rcx
+	call	_ZN4SRAMC1Eyh
+.LEHE1:
+	leaq	8(%rdi), %rdx
+	movq	48(%rbp), %rax
+	movq	%rdx, 8(%rax)
+	leaq	.LC1(%rip), %rdx
+	movq	.refptr._ZSt4cout(%rip), %rcx
+.LEHB2:
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	jmp	.L6
+.L5:
+	movq	%rax, %r12
+	testq	%rsi, %rsi
+	je	.L3
+	movl	$9, %eax
+	subq	%rbx, %rax
+	salq	$5, %rax
+	leaq	(%rsi,%rax), %rbx
+.L4:
+	cmpq	%rsi, %rbx
+	je	.L3
+	subq	$32, %rbx
+	movq	(%rbx), %rax
+	movq	(%rax), %rax
+	movq	%rbx, %rcx
+	call	*%rax
+	jmp	.L4
+.L3:
+	movq	%r12, %rbx
+	movq	%rdi, %rcx
+	call	_ZdaPv
+	movq	%rbx, %rax
+	movq	%rax, %rcx
+	call	_Unwind_Resume
+	nop
+.LEHE2:
+.L6:
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%rsi
+	popq	%rdi
+	popq	%r12
+	popq	%rbp
+	ret
+	.def	__gxx_personality_seh0;	.scl	2;	.type	32;	.endef
+	.seh_handler	__gxx_personality_seh0, @unwind, @except
+	.seh_handlerdata
+.LLSDA5485:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE5485-.LLSDACSB5485
+.LLSDACSB5485:
+	.uleb128 .LEHB0-.LFB5485
+	.uleb128 .LEHE0-.LEHB0
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB1-.LFB5485
+	.uleb128 .LEHE1-.LEHB1
+	.uleb128 .L5-.LFB5485
+	.uleb128 0
+	.uleb128 .LEHB2-.LFB5485
+	.uleb128 .LEHE2-.LEHB2
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE5485:
+	.text
+	.seh_endproc
+	.globl	_ZN16vram_bank_HandleC1Ev
+	.def	_ZN16vram_bank_HandleC1Ev;	.scl	2;	.type	32;	.endef
+	.set	_ZN16vram_bank_HandleC1Ev,_ZN16vram_bank_HandleC2Ev
+	.section .rdata,"dr"
+	.align 8
+.LC2:
+	.ascii "\12entering VRAM_BANK_HANDLE destruction process :\12\0"
+.LC3:
+	.ascii "VRAM_BANK_HANDLE cleaned out\12\0"
+	.text
+	.align 2
+	.globl	_ZN16vram_bank_HandleD2Ev
+	.def	_ZN16vram_bank_HandleD2Ev;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN16vram_bank_HandleD2Ev
+_ZN16vram_bank_HandleD2Ev:
+.LFB5488:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	pushq	%rbx
+	.seh_pushreg	%rbx
+	subq	$40, %rsp
+	.seh_stackalloc	40
+	leaq	128(%rsp), %rbp
+	.seh_setframe	%rbp, 128
+	.seh_endprologue
+	movq	%rcx, -64(%rbp)
+	leaq	16+_ZTV16vram_bank_Handle(%rip), %rdx
+	movq	-64(%rbp), %rax
+	movq	%rdx, (%rax)
+	leaq	.LC2(%rip), %rdx
+	movq	.refptr._ZSt4cout(%rip), %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	testq	%rax, %rax
+	je	.L8
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rdx
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	subq	$8, %rax
+	movq	(%rax), %rax
+	salq	$5, %rax
+	leaq	(%rdx,%rax), %rbx
+.L10:
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	cmpq	%rbx, %rax
+	je	.L9
+	subq	$32, %rbx
+	movq	(%rbx), %rax
+	movq	(%rax), %rax
+	movq	%rbx, %rcx
+	call	*%rax
+	jmp	.L10
+.L9:
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	subq	$8, %rax
+	movq	%rax, %rcx
+	call	_ZdaPv
+.L8:
+	leaq	.LC3(%rip), %rdx
+	movq	.refptr._ZSt4cout(%rip), %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	nop
+	addq	$40, %rsp
+	popq	%rbx
+	popq	%rbp
+	ret
+	.seh_handler	__gxx_personality_seh0, @unwind, @except
+	.seh_handlerdata
+.LLSDA5488:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE5488-.LLSDACSB5488
+.LLSDACSB5488:
+.LLSDACSE5488:
+	.text
+	.seh_endproc
+	.globl	_ZN16vram_bank_HandleD1Ev
+	.def	_ZN16vram_bank_HandleD1Ev;	.scl	2;	.type	32;	.endef
+	.set	_ZN16vram_bank_HandleD1Ev,_ZN16vram_bank_HandleD2Ev
+	.align 2
+	.globl	_ZN16vram_bank_HandleD0Ev
+	.def	_ZN16vram_bank_HandleD0Ev;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN16vram_bank_HandleD0Ev
+_ZN16vram_bank_HandleD0Ev:
+.LFB5490:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)
+	movq	16(%rbp), %rcx
+	call	_ZN16vram_bank_HandleD1Ev
+	movq	16(%rbp), %rcx
+	call	_ZdlPv
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.section .rdata,"dr"
+	.align 8
+.LC4:
+	.ascii "ERROR : invalid SRAM bank ID\12\0\0"
+	.align 8
+.LC5:
+	.ascii "ERROR : error loading sram bank number : \0"
+	.align 8
+.LC6:
+	.ascii " \12Cause : parameter rendFor's null => prevent from a SIGSEGV \12\0\0"
+.LC7:
+	.ascii "NbPx :\0"
+.LC8:
+	.ascii "\12cotePx : \0"
+.LC9:
+	.ascii "\12CoteOctet : \0"
+.LC10:
+	.ascii "\12\0"
+	.text
+	.align 2
+	.globl	_ZN16vram_bank_Handle14loadBanktoVRAMEhP12SDL_RendererP11SDL_Palette
+	.def	_ZN16vram_bank_Handle14loadBanktoVRAMEhP12SDL_RendererP11SDL_Palette;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN16vram_bank_Handle14loadBanktoVRAMEhP12SDL_RendererP11SDL_Palette
+_ZN16vram_bank_Handle14loadBanktoVRAMEhP12SDL_RendererP11SDL_Palette:
+.LFB5491:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	pushq	%rdi
+	.seh_pushreg	%rdi
+	pushq	%rsi
+	.seh_pushreg	%rsi
+	pushq	%rbx
+	.seh_pushreg	%rbx
+	subq	$120, %rsp
+	.seh_stackalloc	120
+	leaq	128(%rsp), %rbp
+	.seh_setframe	%rbp, 128
+	.seh_endprologue
+	movq	%rcx, 32(%rbp)
+	movl	%edx, %eax
+	movq	%r8, 48(%rbp)
+	movq	%r9, 56(%rbp)
+	movb	%al, 40(%rbp)
+	movq	$0, -24(%rbp)
+	movzbl	40(%rbp), %eax
+	cmpl	$9, %eax
+	jle	.L13
+	leaq	.LC4(%rip), %rdx
+	movq	.refptr._ZSt4cout(%rip), %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movl	$0, %eax
+	jmp	.L14
+.L13:
+	cmpq	$0, 48(%rbp)
+	jne	.L15
+	movzbl	40(%rbp), %ebx
+	leaq	.LC5(%rip), %rdx
+	movq	.refptr._ZSt4cout(%rip), %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movl	%ebx, %edx
+	movq	%rax, %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_h
+	leaq	.LC6(%rip), %rdx
+	movq	%rax, %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movl	$0, %eax
+	jmp	.L14
+.L15:
+	cmpq	$0, 56(%rbp)
+	jne	.L16
+	movl	$3, -28(%rbp)
+	movq	32(%rbp), %rax
+	movq	8(%rax), %rax
+	movzbl	40(%rbp), %edx
+	salq	$5, %rdx
+	addq	%rdx, %rax
+	movq	%rax, %rcx
+	call	_ZN4SRAM9getFormatEv
+	movabsq	$-6148914691236517205, %rdx
+	mulq	%rdx
+	movq	%rdx, %rax
+	shrq	%rax
+	movl	%eax, -32(%rbp)
+	pxor	%xmm1, %xmm1
+	cvtsi2sd	-32(%rbp), %xmm1
+	movq	%xmm1, %rax
+	movq	%rax, %xmm0
+	call	sqrt
+	cvttsd2si	%xmm0, %eax
+	movl	%eax, -36(%rbp)
+	movl	-36(%rbp), %edx
+	movl	%edx, %eax
+	addl	%eax, %eax
+	addl	%edx, %eax
+	movl	%eax, -40(%rbp)
+	leaq	.LC7(%rip), %rdx
+	movq	.refptr._ZSt4cout(%rip), %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movq	%rax, %rcx
+	movl	-32(%rbp), %eax
+	movl	%eax, %edx
+	call	_ZNSolsEi
+	leaq	.LC8(%rip), %rdx
+	movq	%rax, %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movq	%rax, %rcx
+	movl	-36(%rbp), %eax
+	movl	%eax, %edx
+	call	_ZNSolsEi
+	leaq	.LC9(%rip), %rdx
+	movq	%rax, %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movq	%rax, %rcx
+	movl	-40(%rbp), %eax
+	movl	%eax, %edx
+	call	_ZNSolsEi
+	leaq	.LC10(%rip), %rdx
+	movq	%rax, %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movq	32(%rbp), %rax
+	movq	8(%rax), %rax
+	movzbl	40(%rbp), %edx
+	salq	$5, %rdx
+	addq	%rdx, %rax
+	movq	%rax, %rcx
+	call	_ZN4SRAM8accesRAWEv
+	movq	%rax, %r10
+	movl	-36(%rbp), %ecx
+	movl	-36(%rbp), %eax
+	movl	$0, 64(%rsp)
+	movl	$0, 56(%rsp)
+	movl	$0, 48(%rsp)
+	movl	$0, 40(%rsp)
+	movl	-40(%rbp), %edx
+	movl	%edx, 32(%rsp)
+	movl	$24, %r9d
+	movl	%ecx, %r8d
+	movl	%eax, %edx
+	movq	%r10, %rcx
+	call	SDL_CreateRGBSurfaceFrom
+	movq	%rax, -24(%rbp)
+	jmp	.L17
+.L16:
+	movq	32(%rbp), %rax
+	movq	8(%rax), %rax
+	movzbl	40(%rbp), %edx
+	salq	$5, %rdx
+	addq	%rdx, %rax
+	movq	%rax, %rcx
+	call	_ZN4SRAM9getFormatEv
+	testq	%rax, %rax
+	js	.L18
+	pxor	%xmm2, %xmm2
+	cvtsi2sdq	%rax, %xmm2
+	movq	%xmm2, %rax
+	jmp	.L19
+.L18:
+	movq	%rax, %rdx
+	shrq	%rdx
+	andl	$1, %eax
+	orq	%rax, %rdx
+	pxor	%xmm0, %xmm0
+	cvtsi2sdq	%rdx, %xmm0
+	addsd	%xmm0, %xmm0
+	movq	%xmm0, %rax
+.L19:
+	movq	%rax, %xmm0
+	call	sqrt
+	cvttsd2si	%xmm0, %esi
+	movq	32(%rbp), %rax
+	movq	8(%rax), %rax
+	movzbl	40(%rbp), %edx
+	salq	$5, %rdx
+	addq	%rdx, %rax
+	movq	%rax, %rcx
+	call	_ZN4SRAM9getFormatEv
+	testq	%rax, %rax
+	js	.L20
+	pxor	%xmm3, %xmm3
+	cvtsi2sdq	%rax, %xmm3
+	movq	%xmm3, %rax
+	jmp	.L21
+.L20:
+	movq	%rax, %rdx
+	shrq	%rdx
+	andl	$1, %eax
+	orq	%rax, %rdx
+	pxor	%xmm0, %xmm0
+	cvtsi2sdq	%rdx, %xmm0
+	addsd	%xmm0, %xmm0
+	movq	%xmm0, %rax
+.L21:
+	movq	%rax, %xmm0
+	call	sqrt
+	cvttsd2si	%xmm0, %edi
+	movq	32(%rbp), %rax
+	movq	8(%rax), %rax
+	movzbl	40(%rbp), %edx
+	salq	$5, %rdx
+	addq	%rdx, %rax
+	movq	%rax, %rcx
+	call	_ZN4SRAM9getFormatEv
+	testq	%rax, %rax
+	js	.L22
+	pxor	%xmm4, %xmm4
+	cvtsi2sdq	%rax, %xmm4
+	movq	%xmm4, %rax
+	jmp	.L23
+.L22:
+	movq	%rax, %rdx
+	shrq	%rdx
+	andl	$1, %eax
+	orq	%rax, %rdx
+	pxor	%xmm0, %xmm0
+	cvtsi2sdq	%rdx, %xmm0
+	addsd	%xmm0, %xmm0
+	movq	%xmm0, %rax
+.L23:
+	movq	%rax, %xmm0
+	call	sqrt
+	cvttsd2si	%xmm0, %ebx
+	movq	32(%rbp), %rax
+	movq	8(%rax), %rax
+	movzbl	40(%rbp), %edx
+	salq	$5, %rdx
+	addq	%rdx, %rax
+	movq	%rax, %rcx
+	call	_ZN4SRAM8accesRAWEv
+	movl	$0, 64(%rsp)
+	movl	$0, 56(%rsp)
+	movl	$0, 48(%rsp)
+	movl	$0, 40(%rsp)
+	movl	%esi, 32(%rsp)
+	movl	$4, %r9d
+	movl	%edi, %r8d
+	movl	%ebx, %edx
+	movq	%rax, %rcx
+	call	SDL_CreateRGBSurfaceFrom
+	movq	%rax, -24(%rbp)
+	movq	-24(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	56(%rbp), %rdx
+	movq	%rdx, 8(%rax)
+.L17:
+	movq	-24(%rbp), %rdx
+	movq	48(%rbp), %rax
+	movq	%rax, %rcx
+	call	SDL_CreateTextureFromSurface
+	movq	%rax, -48(%rbp)
+	movq	-24(%rbp), %rax
+	movq	%rax, %rcx
+	call	SDL_FreeSurface
+	movq	-48(%rbp), %rax
+.L14:
+	addq	$120, %rsp
+	popq	%rbx
+	popq	%rsi
+	popq	%rdi
+	popq	%rbp
+	ret
+	.seh_endproc
+	.section .rdata,"dr"
+.LC11:
+	.ascii "r\0"
+.LC12:
+	.ascii "Invalid file : \0"
+.LC13:
+	.ascii " \12\0\0"
+	.text
+	.align 2
+	.globl	_ZN16vram_bank_Handle18loadFiletoSRAMbankERKch
+	.def	_ZN16vram_bank_Handle18loadFiletoSRAMbankERKch;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN16vram_bank_Handle18loadFiletoSRAMbankERKch
+_ZN16vram_bank_Handle18loadFiletoSRAMbankERKch:
+.LFB5492:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	pushq	%rbx
+	.seh_pushreg	%rbx
+	subq	$88, %rsp
+	.seh_stackalloc	88
+	leaq	128(%rsp), %rbp
+	.seh_setframe	%rbp, 128
+	.seh_endprologue
+	movq	%rcx, -16(%rbp)
+	movq	%rdx, -8(%rbp)
+	movl	%r8d, %eax
+	movb	%al, 0(%rbp)
+	movq	-8(%rbp), %rax
+	leaq	.LC11(%rip), %rdx
+	movq	%rax, %rcx
+	call	fopen
+	movq	%rax, -56(%rbp)
+	movl	$1825201, %ecx
+	call	_Znay
+	movq	%rax, -64(%rbp)
+	cmpq	$0, -56(%rbp)
+	jne	.L25
+	leaq	.LC12(%rip), %rdx
+	movq	.refptr._ZSt4cout(%rip), %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movq	%rax, %rcx
+	movq	-56(%rbp), %rax
+	movq	%rax, %rdx
+	call	_ZNSolsEPKv
+	leaq	.LC13(%rip), %rdx
+	movq	%rax, %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movl	$4, %ecx
+	call	exit
+.L25:
+	movl	$0, -68(%rbp)
+.L27:
+	movq	-56(%rbp), %rax
+	movq	%rax, %rcx
+	call	feof
+	testl	%eax, %eax
+	sete	%al
+	testb	%al, %al
+	je	.L26
+	movl	-68(%rbp), %edx
+	movq	-64(%rbp), %rax
+	leaq	(%rdx,%rax), %rbx
+	movq	-56(%rbp), %rax
+	movq	%rax, %rcx
+	call	fgetc
+	movb	%al, (%rbx)
+	jmp	.L27
+.L26:
+	movq	-16(%rbp), %rax
+	movq	8(%rax), %rax
+	movzbl	0(%rbp), %edx
+	salq	$5, %rdx
+	addq	%rdx, %rax
+	movq	(%rax), %rax
+	addq	$32, %rax
+	movq	(%rax), %rax
+	movl	$1825201, -84(%rbp)
+	movq	$0, -80(%rbp)
+	movq	-16(%rbp), %rdx
+	movq	8(%rdx), %rdx
+	movzbl	0(%rbp), %ecx
+	salq	$5, %rcx
+	addq	%rdx, %rcx
+	leaq	-84(%rbp), %r9
+	movq	-64(%rbp), %r8
+	leaq	-80(%rbp), %rdx
+	call	*%rax
+	nop
+	addq	$88, %rsp
+	popq	%rbx
+	popq	%rbp
+	ret
+	.seh_endproc
+	.globl	_ZTV16vram_bank_Handle
+	.section	.rdata$_ZTV16vram_bank_Handle,"dr"
+	.linkonce same_size
+	.align 8
+_ZTV16vram_bank_Handle:
+	.quad	0
+	.quad	_ZTI16vram_bank_Handle
+	.quad	_ZN16vram_bank_HandleD1Ev
+	.quad	_ZN16vram_bank_HandleD0Ev
+	.globl	_ZTI16vram_bank_Handle
+	.section	.rdata$_ZTI16vram_bank_Handle,"dr"
+	.linkonce same_size
+	.align 8
+_ZTI16vram_bank_Handle:
+	.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+	.quad	_ZTS16vram_bank_Handle
+	.globl	_ZTS16vram_bank_Handle
+	.section	.rdata$_ZTS16vram_bank_Handle,"dr"
+	.linkonce same_size
+	.align 16
+_ZTS16vram_bank_Handle:
+	.ascii "16vram_bank_Handle\0"
+	.text
+	.def	__tcf_0;	.scl	3;	.type	32;	.endef
+	.seh_proc	__tcf_0
+__tcf_0:
+.LFB5778:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	leaq	_ZStL8__ioinit(%rip), %rcx
+	call	_ZNSt8ios_base4InitD1Ev
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.def	_Z41__static_initialization_and_destruction_0ii;	.scl	3;	.type	32;	.endef
+	.seh_proc	_Z41__static_initialization_and_destruction_0ii
+_Z41__static_initialization_and_destruction_0ii:
+.LFB5777:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	movl	%ecx, 16(%rbp)
+	movl	%edx, 24(%rbp)
+	cmpl	$1, 16(%rbp)
+	jne	.L31
+	cmpl	$65535, 24(%rbp)
+	jne	.L31
+	leaq	_ZStL8__ioinit(%rip), %rcx
+	call	_ZNSt8ios_base4InitC1Ev
+	leaq	__tcf_0(%rip), %rcx
+	call	atexit
+.L31:
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.def	_GLOBAL__sub_I__ZN16vram_bank_HandleC2Ev;	.scl	3;	.type	32;	.endef
+	.seh_proc	_GLOBAL__sub_I__ZN16vram_bank_HandleC2Ev
+_GLOBAL__sub_I__ZN16vram_bank_HandleC2Ev:
+.LFB5779:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	movl	$65535, %edx
+	movl	$1, %ecx
+	call	_Z41__static_initialization_and_destruction_0ii
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.section	.ctors,"w"
+	.align 8
+	.quad	_GLOBAL__sub_I__ZN16vram_bank_HandleC2Ev
+	.ident	"GCC: (x86_64-posix-seh, Built by MinGW-W64 project) 6.1.0"
+	.def	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc;	.scl	2;	.type	32;	.endef
+	.def	_Znay;	.scl	2;	.type	32;	.endef
+	.def	_ZN4SRAMC1Eyh;	.scl	2;	.type	32;	.endef
+	.def	_ZdaPv;	.scl	2;	.type	32;	.endef
+	.def	_Unwind_Resume;	.scl	2;	.type	32;	.endef
+	.def	_ZdlPv;	.scl	2;	.type	32;	.endef
+	.def	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_h;	.scl	2;	.type	32;	.endef
+	.def	_ZN4SRAM9getFormatEv;	.scl	2;	.type	32;	.endef
+	.def	sqrt;	.scl	2;	.type	32;	.endef
+	.def	_ZNSolsEi;	.scl	2;	.type	32;	.endef
+	.def	_ZN4SRAM8accesRAWEv;	.scl	2;	.type	32;	.endef
+	.def	SDL_CreateRGBSurfaceFrom;	.scl	2;	.type	32;	.endef
+	.def	SDL_CreateTextureFromSurface;	.scl	2;	.type	32;	.endef
+	.def	SDL_FreeSurface;	.scl	2;	.type	32;	.endef
+	.def	fopen;	.scl	2;	.type	32;	.endef
+	.def	_ZNSolsEPKv;	.scl	2;	.type	32;	.endef
+	.def	exit;	.scl	2;	.type	32;	.endef
+	.def	feof;	.scl	2;	.type	32;	.endef
+	.def	fgetc;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt8ios_base4InitD1Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt8ios_base4InitC1Ev;	.scl	2;	.type	32;	.endef
+	.def	atexit;	.scl	2;	.type	32;	.endef
+	.section	.rdata$.refptr._ZSt4cout, "dr"
+	.globl	.refptr._ZSt4cout
+	.linkonce	discard
+.refptr._ZSt4cout:
+	.quad	_ZSt4cout

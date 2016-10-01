@@ -1,0 +1,218 @@
+	.file	"main.cpp"
+	.section .rdata,"dr"
+_ZStL19piecewise_construct:
+	.space 1
+.lcomm _ZStL8__ioinit,1,1
+.LC0:
+	.ascii "STFU , logic\0"
+	.text
+	.globl	SDL_main
+	.def	SDL_main;	.scl	2;	.type	32;	.endef
+	.seh_proc	SDL_main
+SDL_main:
+.LFB5478:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	pushq	%rbx
+	.seh_pushreg	%rbx
+	subq	$152, %rsp
+	.seh_stackalloc	152
+	leaq	128(%rsp), %rbp
+	.seh_setframe	%rbp, 128
+	.seh_endprologue
+	movl	%ecx, 48(%rbp)
+	movq	%rdx, 56(%rbp)
+	movl	$32, %ecx
+.LEHB0:
+	call	SDL_Init
+	movq	$0, 0(%rbp)
+	movq	$0, -8(%rbp)
+	leaq	-8(%rbp), %rdx
+	movq	%rbp, %rax
+	movq	%rax, 32(%rsp)
+	movq	%rdx, %r9
+	movl	$4, %r8d
+	movl	$100, %edx
+	movl	$100, %ecx
+	call	SDL_CreateWindowAndRenderer
+	leaq	-48(%rbp), %rax
+	movq	%rax, %rcx
+	call	_ZN16vram_bank_HandleC1Ev
+.LEHE0:
+	movq	0(%rbp), %rdx
+	leaq	-48(%rbp), %rax
+	movl	$0, %r9d
+	movq	%rdx, %r8
+	movl	$0, %edx
+	movq	%rax, %rcx
+.LEHB1:
+	call	_ZN16vram_bank_Handle14loadBanktoVRAMEhP12SDL_RendererP11SDL_Palette
+	movq	%rax, 8(%rbp)
+	cmpq	$0, 8(%rbp)
+	jne	.L2
+	leaq	.LC0(%rip), %rdx
+	movq	.refptr._ZSt4cout(%rip), %rcx
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+.L2:
+	movl	$0, -52(%rbp)
+	movl	$0, -56(%rbp)
+	leaq	-56(%rbp), %rcx
+	movq	8(%rbp), %rax
+	leaq	-52(%rbp), %rdx
+	movq	%rdx, 32(%rsp)
+	movq	%rcx, %r9
+	movl	$0, %r8d
+	movl	$0, %edx
+	movq	%rax, %rcx
+	call	SDL_QueryTexture
+	movq	$0, -80(%rbp)
+	movq	$0, -72(%rbp)
+	movl	-56(%rbp), %eax
+	movl	%eax, -72(%rbp)
+	movl	-52(%rbp), %eax
+	movl	%eax, -68(%rbp)
+	movq	0(%rbp), %rax
+	leaq	-80(%rbp), %rcx
+	movq	8(%rbp), %rdx
+	movq	%rcx, %r9
+	movl	$0, %r8d
+	movq	%rax, %rcx
+	call	SDL_RenderCopy
+	movq	0(%rbp), %rax
+	movq	%rax, %rcx
+	call	SDL_RenderPresent
+	movl	$3000, %ecx
+	call	SDL_Delay
+.LEHE1:
+	movl	$0, %ebx
+	leaq	-48(%rbp), %rax
+	movq	%rax, %rcx
+	call	_ZN16vram_bank_HandleD1Ev
+	movl	%ebx, %eax
+	jmp	.L6
+.L5:
+	movq	%rax, %rbx
+	leaq	-48(%rbp), %rax
+	movq	%rax, %rcx
+	call	_ZN16vram_bank_HandleD1Ev
+	movq	%rbx, %rax
+	movq	%rax, %rcx
+.LEHB2:
+	call	_Unwind_Resume
+.LEHE2:
+.L6:
+	addq	$152, %rsp
+	popq	%rbx
+	popq	%rbp
+	ret
+	.def	__gxx_personality_seh0;	.scl	2;	.type	32;	.endef
+	.seh_handler	__gxx_personality_seh0, @unwind, @except
+	.seh_handlerdata
+.LLSDA5478:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE5478-.LLSDACSB5478
+.LLSDACSB5478:
+	.uleb128 .LEHB0-.LFB5478
+	.uleb128 .LEHE0-.LEHB0
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB1-.LFB5478
+	.uleb128 .LEHE1-.LEHB1
+	.uleb128 .L5-.LFB5478
+	.uleb128 0
+	.uleb128 .LEHB2-.LFB5478
+	.uleb128 .LEHE2-.LEHB2
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE5478:
+	.text
+	.seh_endproc
+	.def	__tcf_0;	.scl	3;	.type	32;	.endef
+	.seh_proc	__tcf_0
+__tcf_0:
+.LFB5761:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	leaq	_ZStL8__ioinit(%rip), %rcx
+	call	_ZNSt8ios_base4InitD1Ev
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.def	_Z41__static_initialization_and_destruction_0ii;	.scl	3;	.type	32;	.endef
+	.seh_proc	_Z41__static_initialization_and_destruction_0ii
+_Z41__static_initialization_and_destruction_0ii:
+.LFB5760:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	movl	%ecx, 16(%rbp)
+	movl	%edx, 24(%rbp)
+	cmpl	$1, 16(%rbp)
+	jne	.L10
+	cmpl	$65535, 24(%rbp)
+	jne	.L10
+	leaq	_ZStL8__ioinit(%rip), %rcx
+	call	_ZNSt8ios_base4InitC1Ev
+	leaq	__tcf_0(%rip), %rcx
+	call	atexit
+.L10:
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.def	_GLOBAL__sub_I_SDL_main;	.scl	3;	.type	32;	.endef
+	.seh_proc	_GLOBAL__sub_I_SDL_main
+_GLOBAL__sub_I_SDL_main:
+.LFB5762:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	movl	$65535, %edx
+	movl	$1, %ecx
+	call	_Z41__static_initialization_and_destruction_0ii
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.section	.ctors,"w"
+	.align 8
+	.quad	_GLOBAL__sub_I_SDL_main
+	.ident	"GCC: (x86_64-posix-seh, Built by MinGW-W64 project) 6.1.0"
+	.def	SDL_Init;	.scl	2;	.type	32;	.endef
+	.def	SDL_CreateWindowAndRenderer;	.scl	2;	.type	32;	.endef
+	.def	_ZN16vram_bank_HandleC1Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN16vram_bank_Handle14loadBanktoVRAMEhP12SDL_RendererP11SDL_Palette;	.scl	2;	.type	32;	.endef
+	.def	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc;	.scl	2;	.type	32;	.endef
+	.def	SDL_QueryTexture;	.scl	2;	.type	32;	.endef
+	.def	SDL_RenderCopy;	.scl	2;	.type	32;	.endef
+	.def	SDL_RenderPresent;	.scl	2;	.type	32;	.endef
+	.def	SDL_Delay;	.scl	2;	.type	32;	.endef
+	.def	_ZN16vram_bank_HandleD1Ev;	.scl	2;	.type	32;	.endef
+	.def	_Unwind_Resume;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt8ios_base4InitD1Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt8ios_base4InitC1Ev;	.scl	2;	.type	32;	.endef
+	.def	atexit;	.scl	2;	.type	32;	.endef
+	.section	.rdata$.refptr._ZSt4cout, "dr"
+	.globl	.refptr._ZSt4cout
+	.linkonce	discard
+.refptr._ZSt4cout:
+	.quad	_ZSt4cout

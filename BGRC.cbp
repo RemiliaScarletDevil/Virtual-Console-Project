@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BGRC" />
+		<Option pch_mode="2" />
+		<Option compiler="mingw64" />
+		<Build>
+			<Target title="d">
+				<Option output="bin/Debug/BGRC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/" />
+				<Option type="1" />
+				<Option compiler="mingw64" />
+				<Option projectCompilerOptionsRelation="0" />
+				<Option projectLinkerOptionsRelation="0" />
+				<Compiler>
+					<Add option="-Wextra" />
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add directory="src/includes" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="r">
+				<Option output="bin/BGRC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/" />
+				<Option type="1" />
+				<Option compiler="mingw64" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="src/includes" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+			<Add option="-std=c++0x" />
+			<Add option="-m64" />
+			<Add option="-S" />
+			<Add directory="../SDL 2/x86_64-w64-mingw32/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-m64" />
+			<Add option="-lmingw32" />
+			<Add option="-lsdl2main" />
+			<Add option="-lsdl2" />
+			<Add option="-lsdl2.dll" />
+			<Add directory="../SDL 2/x86_64-w64-mingw32/lib" />
+		</Linker>
+		<Unit filename="include/RAM_BASE.h" />
+		<Unit filename="include/globals.h" />
+		<Unit filename="include/sram.h" />
+		<Unit filename="include/vram_bank_handle.h" />
+		<Unit filename="src/RAM_BASE.cpp" />
+		<Unit filename="src/globals.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/sram.cpp" />
+		<Unit filename="src/vram_bank_handle.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
